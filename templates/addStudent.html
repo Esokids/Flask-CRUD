@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Flask Application</title>
+
+</head>
+
+<body>
+    <h1 align="center">เพิ่มข้อมูลนักเรียน</h1>
+    <div class="container">
+        <div class="container">
+            <h2>บันทึกข้อมูล</h2>
+            <form action="{{ url_for('insert') }}" method="post">
+                <div class="form-group">
+                    <label for="fname">ชื่อ</label>
+                    <input type="text" class="form-control" name="fname">
+                </div>
+                <div class="form-group">
+                    <label for="fname">นามสกุล</label>
+                    <input type="text" class="form-control" name="lname">
+                </div>
+                <a class="btn btn-success" href="/">กลับหน้าแรก</a>
+                <button type="submit" class="pull-right btn btn-primary">บันทึก</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
